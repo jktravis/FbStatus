@@ -53,4 +53,14 @@ class Action
 	{
 		return $this->action;
 	}
+
+	/**
+	 * Normalized get method across Objects
+	 *
+	 * @return string
+	 */
+	public function getElement()
+	{
+		return $this->getAction();
+	}
 }
