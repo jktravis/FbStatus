@@ -1,0 +1,4 @@
+jktravis_fbstatus:
+    resource: "@JktravisFbstatusBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,7 @@
+parameters:
+#    jktravis_fbstatus.example.class: Jktravis\FbstatusBundle\Example
+
+services:
+#    jktravis_fbstatus.example:
+#        class: %jktravis_fbstatus.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
