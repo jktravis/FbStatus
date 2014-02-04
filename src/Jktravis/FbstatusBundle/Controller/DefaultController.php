@@ -13,20 +13,33 @@ class DefaultController extends Controller
 	 */
 	public function indexAction()
 	{
-		$actionRepo = $this->getDoctrine()
-			->getRepository('JktravisFbstatusBundle:Action');
+		return $this->render('JktravisFbstatusBundle:Default:index.html.twig',
+			array(
+				'action' => $this->getStatusElement('action'),
+		));
+	}
 
-		if (!$actionRepo) {
+	protected function getStatusElement($element)
+	{
+		switch($element)
+		{
+			case 'action':
+				$db = 'JktravisFbstatusBundle:Action';
+		}
+
+		$repo = $this->getDoctrine()
+			->getRepository($db);
+
+		if (!$repo) {
 			throw $this->createNotFoundException(
-				'No Action found for id '.$id
+				'No ' . $element . ' found for id ' . $id
 			);
 		}
 
-		$actions = $actionRepo->findAll();
+		$collection = $repo->findAll();
 
-		$action = $actionRepo->find(rand(1, count($actions)))->getAction();
+		$singularity = $repo->find(rand(1, count($collection)))->getAction();
 
-		return $this->render('JktravisFbstatusBundle:Default:index.html.twig',
-			array('action' => $action));
+		return $singularity;
 	}
 }
