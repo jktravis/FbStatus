@@ -16,6 +16,8 @@ class DefaultController extends Controller
 		return $this->render('JktravisFbstatusBundle:Default:index.html.twig',
 			array(
 				'action' => $this->getStatusElement('action'),
+				'noun' => $this->getStatusElement('noun'),
+				'verb' => $this->getStatusElement('verb'),
 		));
 	}
 
@@ -25,6 +27,10 @@ class DefaultController extends Controller
 		{
 			case 'action':
 				$db = 'JktravisFbstatusBundle:Action';
+			case 'noun':
+				$db = 'JktravisFbstatusBundle:Noun';
+			case 'verb':
+				$db = 'JktravisFbstatusBundle:Verb';
 		}
 
 		$repo = $this->getDoctrine()
@@ -38,7 +44,7 @@ class DefaultController extends Controller
 
 		$collection = $repo->findAll();
 
-		$singularity = $repo->find(rand(1, count($collection)))->getAction();
+		$singularity = $repo->find(rand(1, count($collection)))->getElement();
 
 		return $singularity;
 	}
