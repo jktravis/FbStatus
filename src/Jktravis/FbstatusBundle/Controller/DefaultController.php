@@ -10,8 +10,8 @@ class DefaultController extends Controller
 	/**
 	 * @Route("/")
 	 */
-	public function indexAction($name)
+	public function indexAction()
 	{
-		return $this->render('JktravisFbstatusBundle:Default:index.html.twig', array('name' => $name));
+		return $this->render('JktravisFbstatusBundle:Default:index.html.twig');
 	}
 }
