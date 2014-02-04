@@ -40,5 +40,23 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
+<script>
+$(function()
+{
+	$('#submit').click(function(event)
+		{
+			event.preventDefault();
+			var req = $.post('somepage', function(data)
+				{
+					j = $.parseJSON(data);
+					$('.status').fadeOut(function()
+						{
+							$(this).text(j.status);
+						})
+							.fadeIn();
+				});
+		});
+});
+</script>
 </body>
 </html>
