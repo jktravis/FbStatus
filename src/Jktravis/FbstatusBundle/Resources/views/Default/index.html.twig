@@ -1,1 +1,44 @@
-Hello !
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+		<title>Welcome to Facebook Status Generator</title>
+		<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+		<link href="{{ asset('css/normalize.css' ) }}" rel="stylesheet" />
+		<link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<h1>snarky facebook status generator</h1>
+		</header>
+		<div class="wrap">
+			<section class="post">
+			<div>
+				<form>
+				<img src="http://lorempixel.com/g/50/50/" class="pic" alt="Lorem Pixel Random Image"/>
+				<div class="meta">
+					<div class="name"><a href="#">Your Name</a></div><br/>
+					<div class="time">Sometime earlier</div>
+				</div>
+				<p class="status">Status</p><br/>
+				<button name="submit" id="submit">Status me!</button>
+			</form>
+
+				</section>
+			</div>
+			<section class="notice">
+
+			</section>
+
+			<footer>
+			<p>Purpose: The purpose of this page is to generate a psuedo-random status message in the style of many common Facebook status' that can then be copied and pasted into your facebook window.  </p>
+			<p>Displaimer: All rights reserved where appropriate. This site is not affilitated with Facebook in any way. Please don't sue. </p>
+			</footer>
+		</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+</body>
+</html>
