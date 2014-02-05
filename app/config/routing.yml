@@ -1,7 +1,3 @@
 jktravis_fbstatus:
     resource: "@JktravisFbstatusBundle/Controller/DefaultController.php"
     type: annotation
-
-jktravis_fbstatus_api:
-    resource: "@JktravisFbstatusBundle/Controller/ApiController.php"
-    type: annotation
