@@ -16,8 +16,8 @@ class DefaultController extends Controller
 		return $this->render('JktravisFbstatusBundle:Default:index.html.twig',
 			array(
 				'action' => $this->getStatusElement('action'),
-				// 'noun' => $this->getStatusElement('noun'),
-				// 'verb' => $this->getStatusElement('verb'),
+				'noun' => $this->getStatusElement('noun'),
+				'verb' => $this->getStatusElement('verb'),
 		));
 	}
 
