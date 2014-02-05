@@ -21,7 +21,7 @@
 					<div class="name"><a href="#">Your Name</a></div><br/>
 					<div class="time">Sometime earlier</div>
 				</div>
-				<p class="status">If you {{ verb }} {{ noun }} {{ action }}</p><br/>
+				<p class="status">If you {{ verb }} {{ noun }}, then {{ action }}</p><br/>
 				<button name="submit" id="submit">Status me!</button>
 			</form>
 
@@ -46,7 +46,7 @@ $(function()
 	$('#submit').click(function(event)
 		{
 			event.preventDefault();
-			var req = $.post('somepage', function(data)
+			var req = $.post('api/status.json', function(data)
 				{
 					j = $.parseJSON(data);
 					$('.status').fadeOut(function()
