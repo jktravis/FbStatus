@@ -2,7 +2,6 @@
 
 namespace Jktravis\FbstatusBundle\Controller;
 
-use Jktravis\FbstatusBundle\Entity\Action;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
